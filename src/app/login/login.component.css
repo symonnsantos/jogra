@@ -1,0 +1,78 @@
+body {
+    background-image: url(../../assets/background-login.jpg);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    padding-top: 110px;
+    width: 400px;
+    height: 580px;
+    background-color: transparent;
+}
+
+.input-group-prepend, .input-group-text, input {
+    background-color: transparent;
+    color: white;
+}
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 7px;
+}
+
+h1:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+h1:hover:before, h1:focus:before, h1:active:before {
+    right: 0;
+  }
+
+i:hover {
+    transition-property: all;
+    transition-duration: 0.5s;
+    color: rgb(103, 241, 241);
+}
+
+h1, i {
+    color: white;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    background:transparent;
+    outline:none;
+    color: white;
+}
+button:hover {
+    transition-property: all;
+    transition-duration: 0.5s;
+    border-color: rgb(103, 241, 241);
+    color: rgb(103, 241, 241);
+}
+
+#login {
+    padding-top: 15px;
+}

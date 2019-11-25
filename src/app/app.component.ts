@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jogra';
+
+  mostrarLogin: boolean = false;
+
+  constructor(private authService: AuthService){
+
+  }
+
+  ngOnInit(){
+    this.authService.mostrarLoginEmitter.subscribe(
+      mostrar => this.mostrarLogin = mostrar
+    );
+  }
+
 }

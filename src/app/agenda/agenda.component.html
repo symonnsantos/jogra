@@ -1,0 +1,76 @@
+<div *ngIf="deslogado" class="container">
+    <div id="pop-up">
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2">
+                <button (click)="cancel()" type="submit" id="fechar">X</button>
+            </div>
+        </div>        
+        <h2 id="titulo-login">Faça o login antes de agendar o seu serviço</h2>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md 5">
+                <button (click)="goToLogin()" id="login" type="submit">Fazer Login</button>
+            </div>
+            <div class="col-md 5">
+                <button (click)="cancel()" id="cancelar" type="submit">Cancelar</button>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="agendamento">
+    <h2 id="titulo">Faça seu agendamento</h2><br>
+    <div class="form-row">
+        <div class="col-md-4">            
+            <div class="form-row">
+                <div class="col-md-5"></div>
+                <div class="col-md-3">
+                    <label for="">Dia</label>
+                    <select name="" id="" class="form-control">
+                        <option *ngFor="let dia of dias"> {{ dia }} </option>
+                    </select>
+                </div>  
+                <div class="col-md-4">
+                    <label for="">Mês</label>
+                    <select name="" id="" class="form-control">
+                        <option *ngFor="let mes of meses"> {{ mes }} </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <label for="">Hora</label>
+                    <select name="" id="" class="form-control">
+                        <option *ngFor="let hora of horas"> {{ hora }} </option>
+                    </select>
+                </div>  
+                <div class="col-md-3">
+                    <label for="">Minuto</label>
+                    <select name="" id="" class="form-control">
+                        <option *ngFor="let minuto of minutos"> {{ minuto }} </option>
+                    </select>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-row">
+                <div class="col-md-8">
+                    <label for="">Serviço</label>
+                    <select name="" id="" class="form-control">
+                        <option *ngFor="let servico of servicos"> {{ servico }} </option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <button (click)="verificar()" type="button" class="btn btn-primary btn-lg">Verificar disponibilidade</button>
+</div>
