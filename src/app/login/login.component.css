@@ -24,7 +24,14 @@ body {
     color: white;
 }
 
+p {
+    color: white;
+    margin-bottom: 0%;
+    text-align: center;
+}
+
 #ou {
+    padding-top: 20px;
     color: white;
     text-align: center;
 }

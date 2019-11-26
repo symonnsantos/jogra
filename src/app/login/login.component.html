@@ -1,6 +1,6 @@
 <body>
     <div class="container">
-        <div class="form-group">
+        <div class="form-group">            
             <h1>Login</h1><br>            
             <div class="input-group-prepend" id="login">
                 <div class="input-group-text"><i class="fas fa-user-alt"></i></div>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <button type="submit" (click)="submit()">Entrar</button>
-        <br><br>
+        <p *ngIf="incorreto">.:: Usuário ou senha incorretos ::.</p>
         <div>
             <p id="ou">_________________________ ou _________________________</p>
         </div>

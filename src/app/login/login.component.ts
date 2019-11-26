@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
 
   private usuario: Usuario = new Usuario();
 
+  incorreto: boolean = false;
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
@@ -18,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   submit(){
     this.authService.submit(this.usuario)
+    this.incorreto = this.authService.offline
   }
 
   alternativo(){

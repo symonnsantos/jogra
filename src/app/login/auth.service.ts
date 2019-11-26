@@ -32,7 +32,6 @@ export class AuthService {
       this.offline = false;
     } else {
       this.usuarioAutenticado = false;
-      alert('Usuário ou senha incorretos')
       this.offline = true;
     }
   }

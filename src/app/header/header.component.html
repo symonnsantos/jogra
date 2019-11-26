@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <ul class="navbar-nav text-center list-unstyled list-inline">
                 <li class="col-md-12">
-                    <a href="">____________________________________________________________________________________________</a>
+                    <a href="">______________________________________________________________________________________________________________________________________</a>
                 </li>
             </ul>
         </div>
@@ -20,7 +20,10 @@
         <div class="row">
             <div class="col-md-12">
             <ul routerLinkActive="active" class="navbar-nav text-center list-unstyled list-inline">
+                <li class="nav-link col-md-1">
+                </li>
                 <li class="nav-link col-md-2">
+                    <a routerLink="/" href="#">home</a>
                 </li>                
                 <li class="nav-link col-md-2">
                     <a routerLink="/agenda" href="#">Agendar</a>
@@ -37,7 +40,7 @@
                 <li *ngIf="mostrarLogin" class="nav-link col-md-2">
                     <a (click)="logoff()" routerLink="/login" href="#">Sair</a>
                 </li>
-                <li class="nav-link col-md-2">
+                <li class="nav-link col-md-1">
                 </li>
             </ul>
         </div>

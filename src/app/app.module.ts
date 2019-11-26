@@ -16,6 +16,8 @@ import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
 import { FazerLoginComponent } from './fazer-login/fazer-login.component';
 import { ConfirmarComponent } from './agenda/confirmar/confirmar.component';
+import { QuemSomosComponent } from './home/quem-somos/quem-somos.component';
+import { ParceirosComponent } from './home/parceiros/parceiros.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ConfirmarComponent } from './agenda/confirmar/confirmar.component';
     ServicosComponent,
     PaginaNaoEncontradaComponent,
     FazerLoginComponent,
-    ConfirmarComponent
+    ConfirmarComponent,
+    QuemSomosComponent,
+    ParceirosComponent
   ],
   imports: [
     BrowserModule,
