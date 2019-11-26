@@ -18,6 +18,7 @@ import { FazerLoginComponent } from './fazer-login/fazer-login.component';
 import { ConfirmarComponent } from './agenda/confirmar/confirmar.component';
 import { QuemSomosComponent } from './home/quem-somos/quem-somos.component';
 import { ParceirosComponent } from './home/parceiros/parceiros.component';
+import { GaleriaComponent } from './home/galeria/galeria.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ParceirosComponent } from './home/parceiros/parceiros.component';
     FazerLoginComponent,
     ConfirmarComponent,
     QuemSomosComponent,
-    ParceirosComponent
+    ParceirosComponent,
+    GaleriaComponent
   ],
   imports: [
     BrowserModule,
