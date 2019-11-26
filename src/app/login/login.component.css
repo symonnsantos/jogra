@@ -5,8 +5,15 @@ body {
     position: relative;
 }
 
+#instagram, #facebook {
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .container {
-    padding-top: 110px;
+    padding-top: 50px;
     width: 400px;
     height: 580px;
     background-color: transparent;
@@ -15,6 +22,11 @@ body {
 .input-group-prepend, .input-group-text, input {
     background-color: transparent;
     color: white;
+}
+
+#ou {
+    color: white;
+    text-align: center;
 }
 
 h1 {

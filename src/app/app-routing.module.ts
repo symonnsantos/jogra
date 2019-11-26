@@ -1,3 +1,4 @@
+import { ConfirmarComponent } from './agenda/confirmar/confirmar.component';
 import { FazerLoginComponent } from './fazer-login/fazer-login.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'agenda', component: AgendaComponent },
+  { path: 'agenda/confirmar', component: ConfirmarComponent },
   { path: 'produtos', component: ProdutosComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'fazerlogin', component: FazerLoginComponent },

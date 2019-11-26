@@ -8,34 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./agenda.component.css']
 })
 export class AgendaComponent implements OnInit {
-
+  
   logado: boolean = false;
-
   deslogado: boolean = false;
   
-  cancel(){
-    console.log('cancelou!')
-    this.deslogado = false;
-  }
-
-  goToLogin(){
-    console.log('aaaa')
-    this.route.navigate(['/login'])
-  }
-
-  verificar() {
-    console.log(`Está logado? ${this.logado}`)
-    this.authService.mostrarLoginEmitter.subscribe(
-      mostrar => this.logado = mostrar
-    );
-    if(this.logado === false){
-      this.deslogado = true;
-    } else {
-      this.logado = true;
-      this.deslogado = false;
-    }
-    console.log(`Está deslogado? ${this.deslogado}`)
-  }
 
   dias: any[] = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
   meses: any[] =  ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']  
@@ -45,18 +21,30 @@ export class AgendaComponent implements OnInit {
 
   servicos: any[] = ['Corte Feminino', 'Corte Masculino', 'Escova', 'Barba']
 
+  verificar(){
+    console.log(this.authService.online)
+    console.log(this.authService.offline)
+    this.deslogado = this.authService.offline;
+    if(this.authService.online == true){
+      this.route.navigate(['agenda/confirmar'])
+    }
+  }
+
 
   constructor(
     private route: Router,
     private authService: AuthService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     console.log(`Está logado? ${this.logado}`)
     console.log(`Está deslogado? ${this.deslogado}`)
     this.authService.mostrarLoginEmitter.subscribe(
       mostrar => this.logado = mostrar
     );
     console.log(`Está logado? ${this.logado}`)
+    this.authService.esconderLoginEmitter.subscribe(
+      esconder => this.deslogado = esconder
+    )
   }
 
 }

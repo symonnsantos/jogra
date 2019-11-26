@@ -1,3 +1,4 @@
+<!--
 <div *ngIf="deslogado" class="container">
     <div id="pop-up">
         <div class="row">
@@ -19,6 +20,7 @@
         </div>
     </div>
 </div>
+-->
 
 <div class="container" id="agendamento">
     <h2 id="titulo">Faça seu agendamento</h2><br>
@@ -71,6 +73,12 @@
             </div>
         </div>
     </div>
+    <br>
+
+    <div id="off" *ngIf="deslogado" class="alert alert-danger" role="alert">
+        O usuário está offline. Faça o login antes de continuar.
+    </div>
+    
     <br><br>
     <button (click)="verificar()" type="button" class="btn btn-primary btn-lg">Verificar disponibilidade</button>
 </div>

@@ -1,3 +1,7 @@
 .container, .footer-copyright {
     color: #015F94;
 }
+
+div {
+    color: white;
+}

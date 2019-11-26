@@ -10,6 +10,9 @@ export class AuthService {
 
   private usuarioAutenticado: boolean = false;
 
+  online: boolean = false;
+  offline: boolean = true;
+
   mostrarLoginEmitter = new EventEmitter<boolean>();
 
   esconderLoginEmitter = new EventEmitter<boolean>();
@@ -25,9 +28,12 @@ export class AuthService {
 
       this.mostrarLoginEmitter.emit(true);
       this.esconderLoginEmitter.emit(false);
+      this.online = true;
+      this.offline = false;
     } else {
       this.usuarioAutenticado = false;
       alert('Usuário ou senha incorretos')
+      this.offline = true;
     }
   }
 

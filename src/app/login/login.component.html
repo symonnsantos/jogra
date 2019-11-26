@@ -5,14 +5,31 @@
             <div class="input-group-prepend" id="login">
                 <div class="input-group-text"><i class="fas fa-user-alt"></i></div>
                 <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="form-control" placeholder="Login">
-            </div>            
+            </div>
         </div>
         <div class="form-group">
             <div class="input-group-prepend">
                 <div class="input-group-text"><i class="fas fa-lock"></i></div>
                 <input [(ngModel)]="usuario.senha" id="senha" type="password" class="form-control" placeholder="Senha">
-            </div>            
+            </div>
         </div>
         <button type="submit" (click)="submit()">Entrar</button>
+        <br><br>
+        <div>
+            <p id="ou">_________________________ ou _________________________</p>
+        </div>
+        <br>
+        <div id="facebook" class="form-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fab fa-facebook-f"></i></div>
+                <button type="submit" (click)="alternativo()">Login com Facebook</button>
+            </div>
+        </div>
+        <div id="instagram" class="form-group">
+            <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fab fa-instagram"></i></div>
+                <button type="submit" (click)="alternativo()">Login com Instagram</button>
+            </div>
+        </div>
     </div>
 </body>

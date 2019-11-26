@@ -20,4 +20,8 @@ export class LoginComponent implements OnInit {
     this.authService.submit(this.usuario)
   }
 
+  alternativo(){
+    alert('Desculpe, essa opção ainda não está disponível.')
+  }
+
 }

@@ -19,6 +19,13 @@ button {
     margin-right: auto;
 }
 
+#off {
+    width: 72%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 #pop-up {

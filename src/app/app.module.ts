@@ -15,6 +15,7 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
 import { AuthService } from './login/auth.service';
 import { FormsModule } from '@angular/forms';
 import { FazerLoginComponent } from './fazer-login/fazer-login.component';
+import { ConfirmarComponent } from './agenda/confirmar/confirmar.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FazerLoginComponent } from './fazer-login/fazer-login.component';
     ProdutosComponent,
     ServicosComponent,
     PaginaNaoEncontradaComponent,
-    FazerLoginComponent
+    FazerLoginComponent,
+    ConfirmarComponent
   ],
   imports: [
     BrowserModule,
