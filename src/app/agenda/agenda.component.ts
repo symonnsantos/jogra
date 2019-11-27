@@ -1,6 +1,8 @@
+import { MarcarService } from './marcar.service';
 import { AuthService } from './../login/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Horario } from './agenda';
 
 @Component({
   selector: 'app-agenda',
@@ -8,24 +10,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./agenda.component.css']
 })
 export class AgendaComponent implements OnInit {
+
+  private agenda: Horario = new Horario()
   
   logado: boolean = false;
   deslogado: boolean = false;
-  
-
-  dias: any[] = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
-  meses: any[] =  ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']  
-
-  horas: any[] = ['07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
-  minutos: any[] = ['00', '15', '30', '45']
 
   servicos: any[] = ['Corte Feminino', 'Corte Masculino', 'Escova', 'Barba']
 
   verificar(){
-    console.log(this.authService.online)
-    console.log(this.authService.offline)
     this.deslogado = this.authService.offline;
     if(this.authService.online == true){
+      this.marcarService.verificar(this.agenda)
       this.route.navigate(['agenda/confirmar'])
     }
   }
@@ -33,7 +29,8 @@ export class AgendaComponent implements OnInit {
 
   constructor(
     private route: Router,
-    private authService: AuthService) { }
+    private authService: AuthService,
+    private marcarService: MarcarService) { }
 
   ngOnInit() {    
     console.log(`Está logado? ${this.logado}`)

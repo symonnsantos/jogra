@@ -28,17 +28,9 @@
         <div class="col-md-4">            
             <div class="form-row">
                 <div class="col-md-5"></div>
-                <div class="col-md-3">
-                    <label for="">Dia</label>
-                    <select name="" id="" class="form-control">
-                        <option *ngFor="let dia of dias"> {{ dia }} </option>
-                    </select>
-                </div>  
-                <div class="col-md-4">
-                    <label for="">Mês</label>
-                    <select name="" id="" class="form-control">
-                        <option *ngFor="let mes of meses"> {{ mes }} </option>
-                    </select>
+                <div class="col-md-7">
+                    <label for="">Data</label>
+                    <input [(ngModel)]="agenda.data" class="form-control" id="date" type="date">
                 </div>
             </div>
         </div>
@@ -46,17 +38,10 @@
         <div class="col-md-4">
             <div class="form-row">
                 <div class="col-md-3"></div>
-                <div class="col-md-3">
-                    <label for="">Hora</label>
-                    <select name="" id="" class="form-control">
-                        <option *ngFor="let hora of horas"> {{ hora }} </option>
-                    </select>
-                </div>  
-                <div class="col-md-3">
-                    <label for="">Minuto</label>
-                    <select name="" id="" class="form-control">
-                        <option *ngFor="let minuto of minutos"> {{ minuto }} </option>
-                    </select>
+                <div class="col-md-6">
+                    <label for="">Horário</label>
+                    <input [(ngModel)]="agenda.hora" class="form-control" type="time" id="appt" name="appt"
+                    min="09:00" max="18:00" required>
                 </div>
                 <div class="col-md-3"></div>
             </div>
@@ -65,7 +50,7 @@
             <div class="form-row">
                 <div class="col-md-8">
                     <label for="">Serviço</label>
-                    <select name="" id="" class="form-control">
+                    <select [(ngModel)]="agenda.servico" name="" id="" class="form-control">
                         <option *ngFor="let servico of servicos"> {{ servico }} </option>
                     </select>
                 </div>

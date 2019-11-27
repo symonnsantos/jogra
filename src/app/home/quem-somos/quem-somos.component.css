@@ -9,13 +9,8 @@ body {
 }
 
 img {
-    height: 337px;
-    width: 442px;
-}
-
-#imagem {
-    height: 337px;
-    width: 442px;
+    height: 350px;
+    width: auto;
 }
 
 #icone1, #icone2, #icone3, #icone4 {
@@ -124,16 +119,19 @@ h1:hover:before, h1:focus:before, h1:active:before {
     right: 0;
 }
 
-
-#salao {
+img {
     max-width: 100%;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
-#salao:hover {
+img:hover {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
+}
+
+div {
+    overflow: hidden;
 }
